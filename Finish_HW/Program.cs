@@ -16,6 +16,8 @@ void Main()
     string [] str = new string[s];
     FillString(str);
     PrintString(str);
+    Console.WriteLine();
+    MinString(str);
 }
 
 void FillString(string [] str)
@@ -37,4 +39,24 @@ void PrintString(string [] str)
     {
         Console.Write("{0} ", str[i]);
     }
+}
+
+string [] MinString(string [] str)
+{
+    string [] massiv = new string[str.Length];
+    int min = 0;
+    for (int i = 0; i < str.Length; i++)
+    {
+        if (str[i].Length <= 3)
+        {
+            massiv [min] = str[i];
+            min++;
+        }
+    }
+    for (int i = 0; i < massiv.Length; i++)
+    {
+        Console.Write($"{massiv[i]} ");
+        
+    }
+    return str;
 }
